@@ -1,0 +1,180 @@
+{
+  "pdf": {
+    "title": "Doughnut Test Data",
+    "page-starts-from-index": 5,
+    "program-starts-from-index": "1.1",
+    "footer": "Programs borrowed from my friend"
+  },
+
+  "user": {
+    "name": "Doughnut Maker",
+    "email": "doughnutapp@gmail.com",
+    "identity": {
+      "label": "Enrolment Number",
+      "value": "Batch A: 120120120120"
+    },
+    "section": {
+      "label": "Subject",
+      "value": "Java"
+    }
+  },
+
+  "programs": [
+    {
+      "title": "Applet GUI",
+      "parts": [
+        {
+          "title": "Write an applet program to create following GUI structure",
+          "sources": [
+            {
+              "file": "1a.java",
+              "output": {
+                "images": [
+                  "1a.png"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Write an applet program to create following GUI structure",
+          "sources": [
+            {
+              "file": "1b.java",
+              "output": {
+                "images": [
+                  "1b.png"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Swing application",
+      "parts": [
+        {
+          "title": "Develop a swing application using event handling",
+          "sources": [
+            {
+              "file": "2a.java",
+              "output": {
+                "images": [
+                  "2a1.png",
+                  "2a2.png"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Develop a swing application with different layouts",
+          "sources": [
+            {
+              "file": "2b.java",
+              "output": {
+                "images": [
+                  "2b.png"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Write a program to implement the connection oriented echo client server application",
+      "sources": [
+        {
+          "file": "6_1.java",
+          "output": {
+            "images": [
+              "6_1.png"
+            ]
+          }
+        },
+        {
+          "file": "6_2.java",
+          "output": {
+            "images": [
+              "6_2.png"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Write a program to implement the connectionless echo client server application",
+      "sources": [
+        {
+          "file": "7_1.java"
+        },
+        {
+          "file": "7_1.java",
+          "output": {
+            "images": [
+              "7_1.png",
+              "7_2.png",
+              "7_3.png",
+              "7_4.png",
+              "7_5.png"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Remote Method Invocation Programs",
+      "parts": [
+        {
+          "title": "Write a java RMI application which implements the simple arithmetic operations like add, multiply, subtract and divide. The client program sends two number and the arithmetic operation that wants to perform. The server performs the operation and sends back the result to the client",
+          "sources": [
+            {
+              "file": "8a1.java"
+            },
+            {
+              "file": "8a2.java"
+            },
+            {
+              "file": "8a3.java"
+            },
+            {
+              "file": "8a4.java",
+              "output": {
+                "text": [
+                  "8output.txt"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Write an RMI application where client supplies the string arguments and server responds the number of character, number of words and number of digits in given string.",
+          "sources": [
+            {
+              "file": "8b1.java"
+            },
+            {
+              "file": "8b2.java"
+            },
+            {
+              "file": "8b3.java"
+            },
+            {
+              "file": "8b4.java",
+              "output": {
+                "images": [
+                  "8b1.png",
+                  "8b2.png",
+                  "8b3.png",
+                  "8b4.png"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

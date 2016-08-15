@@ -1,0 +1,125 @@
+@mute-color: #333;
+
+// @import "open-sans.less";
+// @import "ubuntu-mono.less";
+@import "open-sans2.less";
+@import "hack2.less";
+
+@import "normalize.less";
+@import "highlight.less";
+@import "type.less";
+
+@pdf-spacing-left: 0.55in;
+@pdf-spacing-right: 0.25in;
+@index-background: #bbb;
+
+@import "pdf.less";
+@import "program.less";
+
+html {
+  font-family: "Open Sans";
+  font-size: 12px;
+  // text-rendering: optimize-speed;
+}
+
+body {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: @pdf-spacing-left;
+  padding-right: @pdf-spacing-right;
+}
+
+code, pre {
+  font-family: "Hack";
+  // text-rendering: optimize-speed;
+}
+
+table {
+  width: 100%;
+
+  td {
+    vertical-align: middle;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.highlighttable {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.border {
+  margin-bottom: 10px;
+
+  span {
+    border-bottom: 1px dotted @mute-color;
+  }
+}
+
+.no-break + .no-break {
+  margin-top: 20px;
+}
+
+.no-break {
+  page-break-inside: avoid !important;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+
+  .no-break-title {
+    font-style: italic;
+    border-top: 1px solid #ddd;
+    padding: 10px 0 0 0;
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+}
+
+table.highlighttable {
+  tr {
+    td {
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
+  }
+
+  tr:nth-child(2n+1) {
+    td {
+      background: lighten(#ddd, 5%);
+    }
+  }
+
+  pre {
+    padding: 0;
+    margin: 0;
+  }
+
+  tr {
+    page-break-inside: avoid !important;
+    padding: 0;
+    margin: 0;
+
+    td:first-child {
+      width: 1px;
+      text-align: right;
+      padding-left: 6px;
+      padding-right: 6px;
+      border-right: 1px solid #ddd;
+    }
+
+    td:nth-child(2) {
+      padding-left: 6px;
+    }
+  }
+}

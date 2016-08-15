@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "head.html" %}
+
+    <script>
+      window.onload = function() {
+        var vars = {};
+        var x = document.location.search.substring(1).split('&');
+        for (var i in x) {
+          var z = x[i].split('=', 2);
+          vars[z[0]] = unescape(z[1]);
+          if(z[0] == 'page') break;
+        }
+        document.querySelectorAll('#pdf-footer-page-number')[0].innerHTML = vars['page'];
+      };
+    </script>
+  </head>
+  <body class="pdf-footer">
+    <table>
+      <tbody>
+        <tr>
+          <td>{{ config.footer }}</td>
+          <td id="pdf-footer-page-number"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

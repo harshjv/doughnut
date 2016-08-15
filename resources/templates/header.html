@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "head.html" %}
+  </head>
+  <body class="pdf-header">
+    <table>
+      <thead>
+        <tr>
+          <td>{{ config.header.left.label }}</td>
+          <td>{{ config.header.center.label }}</td>
+          <td>{{ config.header.right.label }}</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ config.header.left.value }}</td>
+          <td>{{ config.header.center.value }}</td>
+          <td>{{ config.header.right.value }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

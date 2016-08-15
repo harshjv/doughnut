@@ -1,0 +1,38 @@
+{% from 'macros.html' import program_header, program_sources %}
+
+{% set first = True %}
+
+{% if get_index0(config['program-starts-from-index']) %}
+  {% set index0 = get_index0(config['program-starts-from-index']) %}
+{% else %}
+  {% set index0 = 1 %}
+{% endif %}
+
+{% for program in config.programs %}
+<div class="program">
+  {{ program_header(index0=index0, title=program.title, date=program.date) }}
+
+  {% if program.parts %}
+    <div class="subprograms">
+      {% set index1 = 1 %}
+      {% if first %}
+        {% if get_index1(config['program-starts-from-index']) %}
+          {% set index1 = get_index1(config['program-starts-from-index']) %}
+        {% endif %}
+      {% endif %}
+      {% for part in program.parts %}
+        <div class="subprogram">
+          {{ program_header(index1=index0, index0=index1, title=part.title, date=part.date) }}
+          {{ program_sources(part.sources, index1=index1, index2=index0) }}
+          {% set index1 = index1 + 1 %}
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+      {{ program_sources(program.sources, index1=index0) }}
+  {% endif %}
+
+</div>
+{% set index0 = index0 + 1 %}
+{% set first = False %}
+{% endfor %}

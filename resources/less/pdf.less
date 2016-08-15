@@ -1,0 +1,79 @@
+.pdf-footer, .pdf-header {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.pdf-header {
+  tr {
+    padding: 0;
+    margin: 0;
+  }
+
+  thead {
+    color: #777;
+    font-weight: normal;
+    font-size: 0.8rem;
+
+    td {
+      vertical-align: bottom;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  tbody {
+    color: #555;
+    font-weight: bold;
+
+    td {
+      vertical-align: top;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  tr {
+    td:first-child {
+      width: 33%;
+    }
+
+    td:nth-child(n+2) {
+      text-align: center;
+      width: 34%;
+    }
+
+    td:last-child {
+      text-align: right;
+      width: 33%;
+    }
+  }
+}
+
+.pdf-footer {
+  margin-right: -@pdf-spacing-right;
+  font-size: 0.8rem;
+
+  tbody {
+    color: #555;
+
+    td {
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  }
+
+  tr {
+    td:first-child {
+      font-style: italic;
+    }
+
+    td:last-child {
+      background: @index-background;
+      width: 1px;
+      text-align: right;
+      padding-left: @pdf-spacing-right;
+      padding-right: @pdf-spacing-right;
+    }
+  }
+}

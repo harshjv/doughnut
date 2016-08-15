@@ -1,0 +1,70 @@
+.program {
+  page-break-after: always;
+
+  &:last-child {
+    page-break-after: avoid;
+  }
+
+  .subprogram:nth-child(n+2) {
+    page-break-before: always;
+  }
+}
+
+.program-date {
+  margin: 0;
+  color: #555;
+  font-size: 90%;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+  }
+}
+
+.program-header {
+  margin-left: -@pdf-spacing-left;
+  margin-right: -0.25in;
+  margin-bottom: 15px;
+
+  .program-index {
+    width: 1px;
+    padding-left: @pdf-spacing-left;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background: @index-background;
+  }
+
+  .program-title {
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  &.program-header-with-date {
+    .program-index {
+      vertical-align: middle;
+    }
+
+    .program-title {
+      vertical-align: top;
+      padding-top: 0;
+    }
+
+    .program-date {
+      vertical-align: bottom;
+      padding-left: 10px;
+      padding-top: 5px;
+    }
+  }
+}
+
+.sources {
+  .source:nth-child(n+2) {
+    margin-top: 20px;
+  }
+  .source {
+    .program-header:nth-child(n+2) {
+      margin-top: 20px;
+    }
+  }
+}

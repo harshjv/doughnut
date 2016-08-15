@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Harsh Vakharia">
+    <title>Doughnut</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='/assets/css/normalize.css' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+
+    html {
+      font-family: "Open Sans";
+      font-size: 14px;
+      color: #333;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px 10px 50px 10px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    h2, h3, h4, h5, h6, p {
+      text-align: center;
+      margin: 0;
+    }
+
+    h3 {
+      margin-top: 3px;
+      color: #D24141;
+      font-size: 99%;
+    }
+
+    h4 {
+      margin-top: 0px;
+    }
+
+    a {
+      text-decoration: none;
+      border-bottom: 3px solid #CA8147;
+      color: #008FA9;
+    }
+
+    span {
+      color: #088288;
+      border-bottom: 3px solid #D24141;
+    }
+
+    p {
+      margin-top: 20px;
+    }
+
+    h5 {
+      margin-top: 80px;
+    }
+
+    .freepik {
+      color: #CA8147;
+      font-size: 80%;
+      border-bottom: 0;
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="/assets/images/doughnut.png" alt="Doughnut App Logo">
+
+      <h2><span>Doughnut</span></h2>
+      <h3><code>experimental</code></h3>
+
+      <br>
+
+      <form action="/make/doughnut.pdf" method="post" enctype="multipart/form-data">
+        <p><input type="file" name="file"></p>
+        <br>
+        <p><input type="submit" value="Make PDF"></p>
+      </form>
+
+      <br>
+
+      <div style="border: 2px dotted #D24141; padding: 20px">
+        <h3 style="margin:0"><span style="border-bottom: 2px solid; color: #D24141">Downloads</span></h3>
+        <br>
+        <h4 style="margin-bottom: 8px">doughnut.json's schema <abbr title="Work in progress" style="color: #D24141">(WIP)</abbr>: <a href="/schema.json">schema.json</a></h4>
+        <h4>For a testdrive (upload it above): <a href="/test_data.zip">test_data.zip</a></h4>
+      </div>
+
+      <h5>Experiment by <a href="http://harshjv.github.io/" target="_blank">Harsh Vakharia</a></h5>
+      <p style="margin-top: 10px"><a href="http://www.freepik.com/free-vector/donuts-drawing-free_709487.htm" class="freepik" target="_blank">Doughnut vector designed by Freepik</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+{% macro program_header(index0, title, date='', index1='', index2='') -%}
+  {% if index2 %}
+    {% set idx = index2 ~ "." ~ index1 ~ "." ~ index0 %}
+    {% set h = 5 %}
+  {% else %}
+    {%if index1 %}
+      {% set idx = index1 ~ "." ~ index0 %}
+      {% set h = 4 %}
+    {% else %}
+      {% set idx = index0 %}
+      {% set h = 3 %}
+    {% endif %}
+  {% endif %}
+  <table class="program-header {% if date %} program-header-with-date {% endif %}">
+    <tbody>
+      {% if date %}
+        <tr>
+          <td rowspan="2" class="program-index"><h{{ h + 1 }}>{{ idx }}</h{{ h + 1 }}></td>
+          <td class="program-date"><h{{ h + 1 }}>{{ date | datetimeformat }}</h{{ h + 1 }}></td>
+        </tr>
+        <tr>
+          <td class="program-title"><h{{ h }}>{{ title }}</h2></td>
+        </tr>
+      {% else %}
+        <tr>
+          <td class="program-index"><h{{ h + 1 }}>{{ idx }}</h{{ h + 1 }}></td>
+          <td class="program-title"><h{{ h }}>{{ title }}</h{{ h }}></td>
+        </tr>
+      {% endif %}
+    </tbody>
+  </table>
+{%- endmacro %}
+
+{% macro program_text(texts, index1='', index2='', index3='') -%}
+{% for text in texts %}
+  <div class="no-break">
+    {{ print_text(text) }}
+    <p class="no-break-title"><i>Output {{ print_indexes(loop.index, index1, index2, index3) }}</i></p>
+  </div>
+{% endfor %}
+{%- endmacro %}
+
+{% macro program_images(images, index1='', index2='', index3='') -%}
+{% for img in images %}
+  <div class="no-break">
+    {{ print_image(img) }}
+    <p class="no-break-title"><i>Output {{ print_indexes(loop.index, index1, index2, index3) }}</i></p>
+  </div>
+{% endfor %}
+{%- endmacro %}
+
+{% macro program_sources(sources, index1='', index2='') -%}
+<div class="sources">
+
+  {% for source in sources %}
+    <div class="source">
+      {% set filename = source.file | basename %}
+      {% set filename = "Source of <code> " ~ filename ~ "</code>" %}
+
+      {{ program_header(title=filename, index0=loop.index, index1=index1, index2=index2) }}
+
+      {{ print_source(source.file) }}
+
+      {% if source.output %}
+        {{ program_text(source.output.text, index1=loop.index, index2=index1, index3=index2) }}
+        {{ program_images(source.output.images, index1=loop.index, index2=index1, index3=index2) }}
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+{%- endmacro %}
