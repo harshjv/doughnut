@@ -3,5 +3,10 @@
   "description": "Make print-ready PDF of your code!",
   "repository": "https://github.com/harshjv/doughnut",
   "logo": "https://raw.githubusercontent.com/harshjv/doughnut/master/static/assets/images/doughnut.png",
-  "keywords": ["pdf", "print-ready", "print", "source code", "code"]
+  "keywords": ["pdf", "print-ready", "print", "source code", "code"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-multi.git"
+    }
+  ]
 }
