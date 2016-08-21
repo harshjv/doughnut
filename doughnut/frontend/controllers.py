@@ -61,7 +61,3 @@ def make_pdf():
         return send_from_directory(directory=build_directory, filename=output_file)
     else:
         return makeHTML("Invalid input", "Upload valid <b>ZIP</b> archive with valid <b>%s</b> configuration file in it" % settings.CONFIG_FILE_NAME)
-
-@frontend.route('test_data')
-def test_data():
-    return send_from_directory(directory=settings.STATIC_DIRECTORY, filename="test_data.zip", as_attachment=True)
